@@ -1,6 +1,6 @@
 # NGT
 
-Dashboard for data quality analysis and visualization. Tasks we did in this project are : 
+Dashboard for data quality analysis and visualization. Tasks done in this project are : 
 
 - Data exploration.
 - Three data quality checks.
