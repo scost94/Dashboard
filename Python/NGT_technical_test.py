@@ -14,7 +14,11 @@ import matplotlib.pyplot as plt
 from matplotlib import style
 import datetime
 import calendar
-
+import missingno as msno
+import seaborn as sns
+import pylab
+import numpy as np
+import time
 style.use('ggplot')
 import firebase_admin
 from firebase_admin import credentials, firestore
