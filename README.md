@@ -14,8 +14,9 @@ Dashboard for data quality analysis and visualization. Tasks done in this projec
 
 # Instructions
 
-- git  clone https://github.com/scost94/NGT
-- npm install 
+- ```git  clone https://github.com/scost94/NGT ```
+
+- ``` npm install ```
 
 
 # Contact
