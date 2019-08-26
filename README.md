@@ -12,8 +12,11 @@ Dashboard for data quality analysis and visualization. Tasks done in this projec
 * Back end : Python
 * Database : Firebase
 
-# Instructions & Deployment
-- clone https://github.com/scost94/NGT.git
+# Instructions
+
+- git  clone https://github.com/scost94/NGT
 - npm install 
+
+
 # Contact
 Email : boujelben.oussema@gmail.com
