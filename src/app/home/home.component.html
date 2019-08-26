@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" [routerLink]="['/dashboard']">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="navbar-brand js-scroll-trigger" [routerLink]="['/contact']">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="bg-primary text-white">
+  <div class="container text-center">
+    <h1>Welcome</h1>
+    <p class="lead">This website is developed by <strong>Oussema Boujelben.</strong></p>
+    <p class="lead">This dashboard is a single access point for users displaying key metrics in an orderly fashion.</p>
+  </div>
+</header>
+<section id="Concept">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>General Concepts</h2>
+        <p class="lead">I will talk here about some general concepts about data quality and analysis in finance.</p>
+        <ul>
+          <li>Data quality is a top priority for financial firms and it has only grown in importance because of
+            regulation and the need for better operational efficiency. Data quality is hard to measure in the absence of
+            a clear definition.
+          </li>
+          <p></p>
+          <li>Net asset value per share (NAVPS) is an expression for net asset value that represents the value per share
+            of a mutual fund, an exchange-traded fund (ETF), or a closed-end fund.
+            It is calculated by dividing the total net asset value of the fund or company by the number of shares
+            outstanding and is also known as book value per share.
+          </li>
+          <p></p>
+          <li>Shares outstanding refer to a company's stock currently held by all its shareholders, including share
+            blocks held by institutional
+            investors and restricted shares owned by the company’s officers and insiders.
+            In other words, the number of shares outstanding represents the amount of stock on the open market.
+          </li>
+          <p></p>
+          <li>A class of shares is a type of listed company stock that is differentiated by the level of voting rights
+            shareholders receive.
+            For example, a listed company might have two share classes, or classes of stock,
+            designated as Class A and Class B
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>About this page</h2>
+        <p class="lead">In this website, I did the following tasks:</p>
+        <ul>
+          <li>Explore our data.</li>
+          <li>Write 3 data quality checks.</li>
+          <li>Calculate the NAV_Per_Share correlation between the 11 share class and visualize it in a heatmap.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Oussema Boujelben - 2019</p>
+  </div>
+</footer>

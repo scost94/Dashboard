@@ -1,0 +1,14 @@
+<p>Normally the Nb_of_Shares_Outstanding is equal to the NAV_Amount divded by NAV_Per_Share.
+  However, it is not the case for our data. But still, we tried to visualize the relation between
+  the NAV Amount and NAV Per Share </p>
+<h2 class="text-center">Boxplot Coefficient metric [NAV_Amount/Nav_Per_Share]</h2>
+<chart type="boxplot" [data]="data" [options]="options"></chart>
+
+<div id="chartContainer" style="height: 40px; width: 80%;"></div>
+<div class="centrer">
+  <div class="container">
+    <h2 class="text-center">Line Chart for the Coefficient metric</h2>
+    <canvas baseChart [datasets]="datasets2" [labels]="lineChartLabels2" [chartType]="pieChartType"
+            [options]="pieChartOptions"></canvas>
+  </div>
+</div>

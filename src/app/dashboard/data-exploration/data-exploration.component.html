@@ -1,0 +1,52 @@
+<div class="container">
+  <h2> Summary Statistics </h2>
+  <p> Table below is a descriptive statistics that summarize the central tendency, dispersion and shape of a dataset’s
+    distribution,
+    excluding NaN values.</p>
+  <table class="table table-sm">
+    <thead>
+    <tr scope="row">
+      <th>Index</th>
+      <th *ngFor="let col of first_col"> {{col}}</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr scope="row" *ngFor="let row of row_index">
+      <td scope="col">
+        {{row}}
+      </td>
+      <td scope="col" *ngFor="let col of first_col">
+        {{listOfItems[row][col] | number:'.2-2'}}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <h2> Data Description </h2>
+  <p>The table below is a description of our data where for each column we get the type of its values. It can help us
+    to discover if a row contain an erroneous value.</p>
+  <p><strong>Example</strong> : Let us suppose that for the row n°123 and the column NAV_Amount, we have a string
+    there, then the type of the column
+    NAV_Amount will become <font color="red">Object</font> and no longer <font color="red">float64</font>
+  </p>
+  <table class="table table-sm">
+    <thead>
+    <tr scope="row">
+      <th>Variable name</th>
+      <th>Type</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr scope="row" *ngFor="let key of list">
+      <td scope="col">
+        {{key}}
+      </td>
+      <td scope="col">
+        {{listOfItems1[key]}}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,36 @@
+<h2 class="text-center">Data Completeness</h2>
+<h2> Missing Dates</h2>
+<div>
+  <p>Missing, incomplete and inconsistent data can cause massive problems for financial institutions, especially when
+    it comes to risk controlling and decision making.</p>
+  <p>Figure below represents <font color="blue">the information (date) we have for each product</font>.</p>
+
+
+  <div style="display:block">
+    <canvas baseChart [datasets]="barchartdata" [labels]="barchartlabels" [options]="barchartoptions"
+            [legend]="barchartlegend" [chartType]="barcharttype"></canvas>
+  </div>
+  <p> As we can see here, for the product 2A, there are a lot of missing dates.</p>
+</div>
+
+<div id="chartContainer" style="height: 70px; width: 100%;"></div>
+
+<h2> Duplicated data</h2>
+<p> Data can be computed twice by mistake,by 2 different agents or same person ?</p>
+<p> Also duplicated observations can arise during data collection
+  (Combining or merging datasets from multiple sources).
+  And the result is :</p>
+<div class="centrer">
+  <p><strong>{{msg2}} : <font color="red">{{value2}}</font></strong>
+</div>
+
+
+<div id="chartContainer" style="height: 70px; width: 100%;"></div>
+
+<h2> Missing Values</h2>
+<p> Concerning our data, except the missing dates, we checked if we have any missing values for the available dates or
+  variables.
+  And the result is :</p>
+<div class="centrer">
+  <p><strong>{{msg1}} : <font color="red">{{value1}}</font></strong>
+</div>

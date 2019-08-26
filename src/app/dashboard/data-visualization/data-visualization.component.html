@@ -1,0 +1,17 @@
+<h2> Correlation Matrix</h2>
+<p>There may be complex and unknown relationships between the variables in your dataset.
+  It is important to discover and quantify the degree to which variables in your dataset are dependent upon
+  each other. In our case, we have a lot of <strong>missing data</strong>, and there are 2 ways to deal with this.
+  Either by excluding all cases in which either one or both of the values being correlated are missing.
+  Or fill the missing vlaues (mean, statistics etc.) and then calculate the correlation.</p>
+
+<div class="centrer">
+  <ejs-heatmap id='container' style="display:block;" [width]='width' [height]='height' [dataSource]="newList"
+               [xAxis]="xAxe" [yAxis]="xAxe" [titleSettings]='titleSettings' [margin]='margin'>
+
+  </ejs-heatmap>
+</div>
+
+<p> # Positive Correlation: both variables change in the same direction.</p>
+<p> # Neutral Correlation: No relationship in the change of the variables.</p>
+<p> # Negative Correlation: variables change in opposite directions.</p>

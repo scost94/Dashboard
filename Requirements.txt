@@ -1,0 +1,15 @@
+Requirements :
+
+
+# Python
+firebase-admin
+
+
+# Angular
+npm install firebase angularfire2
+npm install bootstrap
+npm install @syncfusion/ej2-angular-heatmap
+npm install chart.js
+npm install ng2-charts
+chartjs-chart-box-and-violin-plot
+npm install angular2-chartjs
