@@ -1,7 +1,7 @@
 "Oussema Boujelben"
 "boujelben.oussema@gmail.com"
 "2019-2020"
-"NGT Technical Test"
+
 
 # In[    Libraries   ]
 
@@ -24,10 +24,10 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 
 # In[    Directory   ]
-file_path = ('C:/Users/Oussema/Desktop/test technique')  # Please specify your path here.
+file_path = ('C:/Users/Oussema/Desktop/')  # Please specify your path here.
 os.chdir(file_path)
 os.listdir()
-data = pd.read_csv("ngt_software_engineer_test_example_data.csv", sep=',')
+data = pd.read_csv("example_data.csv", sep=',')
 
 # In[ Connect to FireBase ]
 
@@ -55,7 +55,7 @@ db = firestore.client()
 
 
 # In[ ]
-collection_name = 'NGT_Test'
+collection_name = 'Work'
 
 
 def todate(date):
@@ -72,7 +72,7 @@ ref.set((description.astype(str)).to_dict())
 
 stat_det = (data.describe()).T
 
-ref = db.collection('NGT_Test').document('Stats_Details')
+ref = db.collection(collection_name).document('Stats_Details')
 ref.set(stat_det.to_dict(orient='index'))
 
 # In[]
@@ -139,7 +139,7 @@ ref.set(moving_average.to_dict('list'))
 
 dup_result = data.duplicated().values.any() == True  # No duplicated rows overall
 
-ref = db.collection('NGT_Test').document(u'Quality_3')
+ref = db.collection(collection_name).document(u'Quality_3')
 ref.set({"Duplicated rows": str(dup_result)})
 
 ## check if there are duplicated values for some specific columns(NAV_Amount,
@@ -185,7 +185,7 @@ Finalprod = {'1C': prod1C, '1D': prod1D, '2B': prod2B}  # Example
 df = pd.DataFrame(Finalprod)
 df['Date'] = data['Date']
 
-ref = db.collection('NGT_Test').document(u'Coeff_line')
+ref = db.collection(collection_name).document(u'Coeff_line')
 ref.set(df.to_dict('list'))
 
 ############-----------------############
@@ -213,7 +213,7 @@ Finalprod = {'1A': prod1A, '1B': prod1B, '1C': prod1C, '1D': prod1D, '2A': prod2
 
 df = pd.DataFrame(Finalprod)
 
-ref = db.collection('NGT_Test').document(u'Coeff_box')
+ref = db.collection(collection_name).document(u'Coeff_box')
 ref.set(df.to_dict('list'))
 
 # plt.scatter(temp['product'],temp['coeff'],color = 'red') #Uncomment to plot
@@ -255,7 +255,7 @@ ref.set(df.to_dict('list'))
 plt.scatter(temp.index, temp['coeff'], color='red')
 temp.index = temp.index.map(str)
 
-ref = db.collection('NGT_Test').document(u'ZZZ')
+ref = db.collection(collection_name).document(u'ZZZ')
 ref.set(temp.to_dict('list'))
 
 # Additional data quality checks: data format should be human/machine readable.
